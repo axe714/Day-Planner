@@ -43,12 +43,12 @@ textarea {
 }
 
 .past {
-  background-color: #d3d3d3;
+  background-color: hsl(3, 59%, 29%); 
   color: white;
 }
 
 .present {
-  background-color: #ff6961;
+  background-color: #f6fa7f; 
   color: white;
 }
 
