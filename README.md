@@ -8,7 +8,6 @@ This application is a day planner that allows the user to create and log a to-do
 3. Red time block = an hour that is in the past
 ```
 
-
 At any given time, the user can return back to the application and their previous saved input will automatically load once the application is started.
 
 At the top of the page, a live clock, along with the current date is displayed for the user to utilize. 

@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@300&family=Kanit:wght@200;400&display=swap');
+
+* {
+  font-family: 'Anek Bangla', sans-serif;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
