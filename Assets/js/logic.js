@@ -17,16 +17,27 @@ for(var i = 9; i<18; i++){
     makeTimeblocks(i);
 }
 
-var saveBtn = document.querySelector(".saveBtn")
+var saveBtn = document.querySelectorAll(".saveBtn")
 var toDoDescription = document.querySelector(".description")
 var toDoHour = document.querySelector(".hour")
 
-//Not working as intended as of now.
-function saveToDo(){
-    localStorage.setItem(toDoHour.textContent, toDoDescription.value);
-}
+// create an event listener for every .saveBtn using for loop
+for(var i = 0; i < saveBtn.length; i++){
+    saveBtn[i].addEventListener("click", function(){
+        alert("test1")
+    })}
 
-saveBtn.addEventListener("click", saveToDo());
+// Not working as intended as of now.
+// function saveToDo(){
+//     localStorage.setItem(toDoHour.textContent, toDoDescription.value);
+// }
 
+// function getToDo (){
+//     toDoDescription.value = localStorage.getItem(toDoHour.textContent);
+// }
 
-//when app first loads, need to grab all existing todos and show on the page
+// saveBtn.addEventListener("click", saveToDo());
+
+// getToDo();
+
+// when app first loads, need to grab all existing todos and show on the page
