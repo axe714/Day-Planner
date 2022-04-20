@@ -37,3 +37,8 @@ function saveToDo(event) {
     var toDoTime = event.target.parentNode.children[1].id
     localStorage.setItem(toDoTime, toDoDescription)
 }
+
+//displays current time in the jumbotron
+var displayCurrentTime = document.querySelector("#currentDay");
+displayCurrentTime.textContent = new Date()
+
