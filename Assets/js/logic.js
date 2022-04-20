@@ -1,9 +1,9 @@
-function makeTimeblocks(hour, existingTodo = ""){
+function makeTimeblocks(hour, existingTodo = "") {
     //build some additional logic for if time is past present or future;
     var currentHour = new Date().getHours();
     var presentPastOrFuture = "future";
-    if(currentHour > hour) presentPastOrFuture = "past";
-    if(currentHour === hour) presentPastOrFuture = "present";
+    if (currentHour > hour) presentPastOrFuture = "past";
+    if (currentHour === hour) presentPastOrFuture = "present";
     $(".container").append($(`
     <div class="row time-block">
         <div class="hour col-1">${hour}:00</div>
@@ -13,7 +13,7 @@ function makeTimeblocks(hour, existingTodo = ""){
     //free feel to do the non-jquery equiv.
 }
 
-for(var i = 9; i<18; i++){
+for (var i = 9; i < 18; i++) {
     makeTimeblocks(i);
 }
 
@@ -22,10 +22,15 @@ var toDoDescription = document.querySelector(".description")
 var toDoHour = document.querySelector(".hour")
 
 // create an event listener for every .saveBtn using for loop
-for(var i = 0; i < saveBtn.length; i++){
-    saveBtn[i].addEventListener("click", function(){
-        alert("test1")
-    })}
+for (var i = 0; i < saveBtn.length; i++) {
+    saveBtn[i].addEventListener("click", function () {
+        saveToDo();
+    })
+}
+
+function saveToDo() {
+    
+}
 
 // Not working as intended as of now.
 // function saveToDo(){
