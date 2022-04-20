@@ -7,7 +7,7 @@ function makeTimeblocks(hour, existingTodo = "") {
     $(".container").append($(`
     <div class="row time-block">
         <div class="hour col-1">${hour}:00</div>
-        <textarea name="" id="" cols="30" rows="3" class="description col-9 ${presentPastOrFuture}">${existingTodo}</textarea>
+        <textarea name="" id="${hour}" cols="30" rows="3" class="description col-9 ${presentPastOrFuture}">${existingTodo}</textarea>
         <button class="btn saveBtn col-2">Save</button>
     </div>`));
     //free feel to do the non-jquery equiv.
@@ -23,13 +23,13 @@ var toDoHour = document.querySelector(".hour")
 
 // create an event listener for every .saveBtn using for loop
 for (var i = 0; i < saveBtn.length; i++) {
-    saveBtn[i].addEventListener("click", function () {
-        saveToDo();
-    })
+    saveBtn[i].addEventListener("click", saveToDo)
 }
 
-function saveToDo() {
-    
+function saveToDo(event) {
+    var toDoTime = event.target.parentNode.children[1].value
+    var toDoDescription = event.target.parentNode.children[1].id
+
 }
 
 // Not working as intended as of now.
