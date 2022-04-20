@@ -40,5 +40,10 @@ function saveToDo(event) {
 
 //displays current time in the jumbotron
 var displayCurrentTime = document.querySelector("#currentDay");
-displayCurrentTime.textContent = new Date()
 
+function displayClock() {
+    displayCurrentTime.textContent = new Date().toLocaleString();
+    setTimeout(displayClock, 1000);
+}
+
+displayClock()
