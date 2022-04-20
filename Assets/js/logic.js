@@ -1,6 +1,6 @@
 function makeTimeblocks(hour, existingTodo = "") {
     //build some additional logic for if time is past present or future;
-    var currentHour = new Date().getHours() - 10;
+    var currentHour = new Date().getHours();
     var presentPastOrFuture = "future";
     if (currentHour > hour) presentPastOrFuture = "past";
     if (currentHour === hour) presentPastOrFuture = "present";
