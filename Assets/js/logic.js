@@ -18,6 +18,15 @@ function makeTimeblocks(hour, existingTodo = "") {
     </div>`));
 }
 
+//displays current time in the jumbotron
+var displayCurrentTime = document.querySelector("#currentDay");
+function displayClock() {
+    displayCurrentTime.textContent = new Date().toLocaleString();
+    setTimeout(displayClock, 1000);
+}
+
+displayClock();
+
 //for loop to create timeblocks
 for (var i = 9; i < 18; i++) {
     makeTimeblocks(i);
@@ -28,22 +37,12 @@ var saveBtn = document.querySelectorAll(".saveBtn")
 
 // create an event listener for every .saveBtn using for loop
 for (var i = 0; i < saveBtn.length; i++) {
-    saveBtn[i].addEventListener("click", saveToDo)
+    saveBtn[i].addEventListener("click", saveToDo);
 }
 
 //saves todo to local storage
 function saveToDo(event) {
-    var toDoDescription = event.target.parentNode.children[1].value
-    var toDoTime = event.target.parentNode.children[1].id
-    localStorage.setItem(toDoTime, toDoDescription)
+    var toDoDescription = event.target.parentNode.children[1].value;
+    var toDoTime = event.target.parentNode.children[1].id;
+    localStorage.setItem(toDoTime, toDoDescription);
 }
-
-//displays current time in the jumbotron
-var displayCurrentTime = document.querySelector("#currentDay");
-
-function displayClock() {
-    displayCurrentTime.textContent = new Date().toLocaleString();
-    setTimeout(displayClock, 1000);
-}
-
-displayClock()
